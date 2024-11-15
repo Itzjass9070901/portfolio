@@ -1,124 +1,102 @@
-/* Good Luck Izzy/Jassiel in the future*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
+
 
 body {
-    background-color: #F9F6FB; 
-    color: #333; 
-    line-height: 1.5;
-    font-size: 16px;
-    padding: 40px 80px 0;
-    overflow: hidden;
-}
-
-h1{
-    font-weight: 800;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
+    font-family: system-ui, sans-serif;
+    background: #f0f2f5;
+    padding: 20px;
+    line-height: 1.6;
 }
 
 
-
-.gallery{
-    min-width: 400px;
-    height: 350px;
-    margin-inline: auto;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-.gallery-panel{
-    flex: 1;
-    border-radius: 0.75rem;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.gallery-panel img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: flex .5s ease-in-out;
-}
-.gallery-panel:hover{
-    flex: 2.5;
-}
-.gallery:has(.gallery-panel:hover) .gallery-panel:not(:hover) img {
-    filter: grayscale(100%)
-}
-
-img{
-    max-width: 100%;
-}
-
-/* Header */
-header {
-    background-color: #8B5FBF; 
-    color: #FFF; 
-    padding: 1rem;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
+.form-container {
+    background: white;
+    max-width: 500px;
     margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #FDFDFD;
-}
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    
-}
-
-.nav-links a {
-    color: #FDFDFD; 
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 25px;
-}
-
-.nav-links a:hover {
-    color: #C8A2D6; 
-}
-
-/* Section */
-section {
-    padding: 3rem 2rem;
+.form-header {
     text-align: center;
+    margin-bottom: 30px;
 }
-
-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #8B5FBF; 
-}
-
-section p {
-    font-size: 1.2rem;
-    color: #555; 
+.form-header h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 
-footer {
-    background-color: #8B5FBF; 
-    color: #FFF; 
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
     width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;}
+
+    element.style{
+        width: auto;
+    }
+#terms{
+    width: auto;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+.checkbox-group input {
+    margin-right: 10px;
+}
+.checkbox-group label {
+    margin: 0;
+}
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+    }
 }

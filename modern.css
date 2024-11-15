@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+}
+.header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: #2c3e50;
+    color: white;
+}
+.sidebar{
+    grid-area: sidebar;
+    padding: 2rem;
+    background-color: #2b3a4d;
+    color: white;
+}
+.main{
+        grid-area: main;
+        padding: 2rem;
+}
+.Profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #f4f4f4;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+}
+
+.job-title {
+    font-size: 1.2rem;
+    color: #f4f4f4;
+}
+.contact, .skills, .languages {
+    margin-bottom: 2rem;
+}
+
+.skills span {
+    display: inline-block;
+    background-color: #3c9ec8;
+    color: white;
+    padding: 0.3rem 0.5rem;
+    margin: 0.2rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+.summary, .experience, .education, .projects {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #333;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.3rem;
+}
+
+.job h3 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.job p {
+    font-size: 0.95rem;
+}
+@media (max-width: 768px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar";
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+
