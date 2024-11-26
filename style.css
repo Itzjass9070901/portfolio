@@ -30,32 +30,61 @@ nav {
     margin: 0 auto;
 }
 
-.logo {
+/* Logo */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #C8A2D6; /* Logo text color */
     font-size: 1.5rem;
     font-weight: bold;
-    color: #C8A2D6;
+    transition: color 0.3s ease;
 }
 
-.logo img{
+.logo img {
     height: 95px;
-} 
+    margin-left: 0.5rem;
+}
 
+.logo a:hover {
+    color: #f0e5f4; /* Change logo text color on hover */
+}
+
+/* Nav Links Animation */
 .nav-links {
     list-style: none;
-    display: flex;
-    gap: 1.5rem;
+    display: flex; 
+    gap: 1.5rem; 
+    padding: 0; 
+    margin: 0; 
 }
-
 .nav-links a {
     color: #C8A2D6;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     font-size: 1rem;
+    position: relative;
 }
 
 .nav-links a:hover {
-    color: #f0e5f4;
+    color: #f0e5f4; /* Change link color on hover */
 }
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f0e5f4;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Underline expands on hover */
+}
+
 
 /* Main Content */
 main {
@@ -126,7 +155,7 @@ section h1 {
 
 section p {
     font-size: 1.2rem;
-    color: #f0e5f4;
+    color: #a47cb2;
 }
 
 /* Footer */
@@ -177,7 +206,7 @@ label {
 input, textarea {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #ddd;
+    border: 1px solid #2d2a34;
     border-radius: 3px;
 }
 
@@ -203,52 +232,49 @@ button:hover {
 }
 /* Resume!!!! */
 /* Resume Section */
+/* Resume!!!! */
 .resume-container {
     background-color: #3f2e4f;
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255,);
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #a47cb2;
+}
+
+.resume-section {
     margin-bottom: 2rem;
 }
 
-.resume-header h1 {
-    font-size: 2rem;
-    color: #C8A2D6;
-    margin-bottom: 0.5rem;
-}
-
-.resume-header p {
-    font-size: 1.1rem;
-    color: #f0e5f4;
-}
-
 .section-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
     display: flex;
     align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
     color: #a47cb2;
 }
 
 .section-title i {
-    margin-right: 0.5rem;
     color: #C8A2D6;
 }
 
 .experience-item, .education-item {
     margin-bottom: 1.5rem;
+    color: #a47cb2;
 }
 
 .experience-item h3, .education-item h3 {
-    font-size: 1.2rem;
-    color: #f0e5f4;
-    margin-bottom: 0.5rem;
+    color: #C8A2D6;
 }
 
 .experience-item p, .education-item p {
-    font-size: 1rem;
-    color: #ddd;
-    margin-bottom: 0.5rem;
+    color: #a47cb2;
+    font-size: 0.9rem;
 }
 
 .skills-grid {
@@ -258,25 +284,50 @@ button:hover {
 }
 
 .skill-category {
-    background-color: #4c3a5f;
+    background-color: #3f2e4f;
     padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
 }
 
 .skill-category h3 {
-    font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: #C8A2D6;
 }
 
-.skill-list li {
-    font-size: 1rem;
-    color: #ddd;
-    margin-bottom: 0.3rem;
-    text-align: left;
+.skill-list {
+    list-style: none;
 }
+
+.skill-list li {
+    margin-bottom: 0.3rem;
+    color: #a47cb2;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* Space between the image and text */
+}
+
+.profile-pic {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 2px solid #C8A2D6; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
+.about-container p {
+    font-size: 1.2rem;
+    color: #a47cb2; /* Matches the text color */
+    margin: 0; /* Remove default margins */
+}
+
+
+
+
 
 
 /* Responsiveness */
