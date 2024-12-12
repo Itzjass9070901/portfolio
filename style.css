@@ -1,4 +1,4 @@
-/* General Reset */
+/* Universal Applies */
 * {
     margin: 0;
     padding: 0;
@@ -7,18 +7,19 @@
 }
 
 body {
-    background-color: #2d2a34; /* Darker background to contrast the light purple accents */
-    color: #f0e5f4; /* Softer white for readability */
+    background-color: #2d2a34; 
+    color: #f0e5f4; 
     line-height: 1.6;
     font-size: 16px;
-    overflow-x: hidden;
+     overflow-x: hidden; 
+    /* overflow-y: scroll; */
 }
 
 /* Header */
 header {
-    background-color: #433f45; /* Subtle dark background */
+    background-color: #433f45; 
     color: #C8A2D6;
-    padding: 1rem 0;
+    padding: 1rem;
     width: 100%;
 }
 
@@ -30,12 +31,12 @@ nav {
     margin: 0 auto;
 }
 
-/* Logo */
+/* Logo  */
 .logo a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #C8A2D6; /* Logo text color */
+    color: #C8A2D6; 
     font-size: 1.5rem;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -47,10 +48,10 @@ nav {
 }
 
 .logo a:hover {
-    color: #f0e5f4; /* Change logo text color on hover */
+    color: #f0e5f4; 
 }
 
-/* Nav Links Animation */
+/* Animations */
 .nav-links {
     list-style: none;
     display: flex; 
@@ -67,7 +68,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #f0e5f4; /* Change link color on hover */
+    color: #f0e5f4; 
 }
 
 .nav-links a::after {
@@ -82,7 +83,7 @@ nav {
 }
 
 .nav-links a:hover::after {
-    width: 100%; /* Underline expands on hover */
+    width: 100%; 
 }
 
 
@@ -92,6 +93,15 @@ main {
     margin: 2rem auto;
     padding: 0 1rem;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+/* main-1 for resume to not clash with contact main */
+.main-1{
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
@@ -114,17 +124,24 @@ p {
     height: 350px;
     margin-inline: auto;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: flex-end;
+    gap: 2rem;
+    grid-row: auto;
 }
 
+
 .gallery-panel {
-    flex: 1;
+     width: 300px;
+    flex: 1px;
+    border: 1px solid #444;
     border-radius: 0.75rem;
     cursor: pointer;
     overflow: hidden;
-    background: #433f45;
+    background-color: #2b2b2b;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
+
 
 .gallery-panel img {
     width: 100%;
@@ -135,7 +152,10 @@ p {
 
 .gallery-panel:hover {
     flex: 2.5;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
+
 
 .gallery:has(.gallery-panel:hover) .gallery-panel:not(:hover) img {
     filter: grayscale(100%);
@@ -158,18 +178,17 @@ section p {
     color: #a47cb2;
 }
 
-/* Footer */
 footer {
     background-color: #433f45;
     color: #C8A2D6;
     text-align: center;
-    padding: 0.5rem;
+    /* padding: 1rem; */
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-/* Contact Information */
+
 .contact-info {
     font-size: 1rem;
     color: #C8A2D6;
@@ -177,6 +196,7 @@ footer {
     border-radius: 5px;
     background: #433f45;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+    
 }
 
 .contact-info h1 {
@@ -192,6 +212,7 @@ footer {
     padding: 2rem;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
 }
 
 .form-group {
@@ -231,8 +252,7 @@ button:hover {
     background-color: #a47cb2;
 }
 /* Resume!!!! */
-/* Resume Section */
-/* Resume!!!! */
+
 .resume-container {
     background-color: #3f2e4f;
     padding: 2rem;
@@ -248,12 +268,15 @@ button:hover {
 }
 
 .resume-section {
+    /* text-align: center; */
     margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #a47cb2;
 }
 
 .section-title {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     gap: 0.5rem;
     margin-bottom: 1rem;
     color: #a47cb2;
@@ -265,7 +288,7 @@ button:hover {
 
 .experience-item, .education-item {
     margin-bottom: 1.5rem;
-    color: #a47cb2;
+    color: #fff;
 }
 
 .experience-item h3, .education-item h3 {
@@ -273,7 +296,7 @@ button:hover {
 }
 
 .experience-item p, .education-item p {
-    color: #a47cb2;
+    color: #fff;
     font-size: 0.9rem;
 }
 
@@ -281,6 +304,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
+    text-align: center;
 }
 
 .skill-category {
@@ -296,18 +320,19 @@ button:hover {
 
 .skill-list {
     list-style: none;
+    color: #fff;
 }
 
 .skill-list li {
     margin-bottom: 0.3rem;
-    color: #a47cb2;
+    color: #fff;
 }
 
 .about-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem; /* Space between the image and text */
+    gap: 1rem; 
 }
 
 .profile-pic {
@@ -321,8 +346,8 @@ button:hover {
 
 .about-container p {
     font-size: 1.2rem;
-    color: #a47cb2; /* Matches the text color */
-    margin: 0; /* Remove default margins */
+    color: #a47cb2; 
+    margin: 0; 
 }
 main h1 {
     text-align: center;
@@ -332,8 +357,8 @@ main h1 {
 
 .projects-grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 2rem; 
     justify-content: flex-end;
     padding: 20px;
 }
@@ -381,13 +406,33 @@ main h1 {
     font-size: 0.9rem;
     color: #C8A2D6;
 }
+a.text{
+    color: #a47cb2;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #C8A2D6; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #a47cb2; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3f2e4f; 
+  }
 
 
 
 
-
-
-/* Responsiveness */
+/* Media Responsiveness down */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
