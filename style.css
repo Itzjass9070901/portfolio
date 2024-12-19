@@ -6,6 +6,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 body {
     background-color: #2d2a34; 
     color: #f0e5f4; 
@@ -58,6 +59,7 @@ nav {
     gap: 1.5rem; 
     padding: 0; 
     margin: 0; 
+    
 }
 .nav-links a {
     color: #C8A2D6;
@@ -65,6 +67,7 @@ nav {
     transition: all 0.3s ease;
     font-size: 1rem;
     position: relative;
+    font-size: 20px;
 }
 
 .nav-links a:hover {
@@ -256,7 +259,7 @@ button {
 button:hover {
     background-color: #a47cb2;
 }
-/* Resume!!!! */
+/* Resume Starts */
 
 .resume-container {
     background-color: #2b2b2b;
@@ -332,7 +335,9 @@ button:hover {
     margin-bottom: 0.3rem;
     color: #fff;
 }
+/* Resume Ends */
 
+/* About Me */
 .about-container {
     display: flex;
     align-items: center;
